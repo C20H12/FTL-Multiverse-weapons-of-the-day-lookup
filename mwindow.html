@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiverse Items of the Day Lookup</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+      <h1>Items of the Day Lookup Tool</h1><br>
+      <div class="input1">
+        <label for="input">Enter a price:</label>
+        <input type="text" id="input" name="input"><br>
+      </div>
+      <div class="mainUi">
+        <div class="modeOptions">
+          <h4 class="modes">Select search mode</h4>
+          <input type="radio" id="mode1" name="modeSel" value="wep">
+          <label for="mode1">Weapons</label><br>
+          <input type="radio" id="mode2" name="modeSel" value="drn">
+          <label for="mode2">Drones</label><br>
+          <input type="radio" id="mode3" name="modeSel" value="aug">
+          <label for="mode3">Augments</label><br>
+        </div>
+        <div class="advOptions">
+          <h4 class="advOpts">Toggle advanced options</h4>
+          <input type="checkbox" id="adv1" name="advOpt" value="all0">
+          <label for="adv1">Allow rarity 0 items.</label><br>
+          <input type="checkbox" id="adv2" name="advOpt" value="add">
+          <label for="adv2">Allow addon items.</label><br>
+          <input type="checkbox" id="adv3" name="advOpt1" value="p25" onclick="onlyOne(this)">
+          <label for="adv3">Enable 25% exchange rate.</label><br>
+          <input type="checkbox" id="adv4" name="advOpt1" value="orig" onclick="onlyOne(this)">
+          <label for="adv4">Search with original price.</label><br>
+          <br>
+        </div>
+      </div>
+      <button type="button" id="confirm" onclick="main()">CONFIRM</button><br/>
+    </div>
+    <br>
+    <div id="outputDisp">
+      <table id="table">
+        <tr>
+          <th>Original price</th>
+          <th>Name</th>
+          <th>Rarity</th>
+        </tr>
+      </table>
+      <br>
+    </div>           
+    <p class="err" id="errorOp"></p>
+    <label class="switch">
+      <input class="checkbox" type="checkbox">
+      <span class="slider" id="slider" onclick="changeTheme()"></span>
+    </label>
+    <p class="theme">Toggle Secret Theme</p>
+    <div id="errorOp"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
